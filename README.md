@@ -1,7 +1,8 @@
 # hdstreams
 Tired of searching for Football streams of major/most-watched matches? I have also faced similar issues, but right now, here I am...streaming for y'all guys.
 I stream most of the major football matches with no interruptions, no lags, HD quality, and with English Commentary too.
-So, visit my website and enjoy. A few things to note here:
+So, visit my website and enjoy.
+A few things to note here:
 1. Live Streaming Link will only be available 5 minutes before the Kick off time.
 2. Refresh the browser page 5 minutes before the kickoff time to get the stream link.
 3. After clicking on stream link, wait for 5-10 seconds for the stream to auto adjust the quality to max available quality.
