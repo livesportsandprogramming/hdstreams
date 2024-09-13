@@ -47,11 +47,15 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Al-Nassr vs Al-Ahli Saudi</td>
-                <td>Saudi League</td>
-                <td><a href="https://logwork.com/countdown-timer" class="countdown-timer" data-style="flip2" data-timezone="Asia/Kolkata" data-date="2024-09-13 23:30" data-background="#000000" data-digitscolor="#ffffff" aria-disabled="true">Kick Off</a></td>
-                <td><button type="button" class="btn btn-success" disabled><a href='#' style="color:white">Watch Live</a></button></td>
+                  <th scope="row">1</th>
+                  <td>Al-Nassr vs Al-Ahli Saudi</td>
+                  <td>Saudi League</td>
+                  <td><a href="https://logwork.com/countdown-timer" class="countdown-timer" data-style="flip2" data-timezone="Asia/Kolkata" data-date="2024-09-13 23:30" data-background="#000000" data-digitscolor="#ffffff" aria-disabled="true">Kick Off</a></td>
+                  <td>
+                    <button type="button" class="btn btn-success" disabled><a href='match1_firsthalf.html' style="color:white">Watch First-Half Live</a></button>
+                    <hr>
+                    <button type="button" class="btn btn-success" disabled><a href='match1_secondhalf.html' style="color:white">Watch Second-Half Live</a></button>
+                </td>
               </tr>
             </tbody>
 
@@ -62,5 +66,24 @@
           <h6 style="text-align:center">For any queries, please <a href="mailto:projectd746@gmail.com">Email me</a> as soon as possible for immediate support and to fix the website.</h6>
           <h6 style="text-align:center">Copyright&copy; 2024. All Rights Reserved.</h6>
         </footer>
+<script>
+        function refreshAt(hours, minutes, seconds) {
+          var now = new Date();
+          var then = new Date();
+      
+          if(now.getUTCHours() > hours ||
+             (now.getUTCHours() == hours && now.getUTCMinutes() > minutes) ||
+              now.getUTCHours() == hours && now.getUTCMinutes() == minutes && now.getUTCSeconds() >= seconds) {
+              then.setUTCDate(now.getUTCDate() + 1);
+          }
+          then.setUTCHours(hours);
+          then.setUTCMinutes(minutes);
+          then.setUTCSeconds(seconds);
+      
+          var timeout = (then.getTime() - now.getTime());
+          setTimeout(function() { window.location.reload(true); }, timeout);
+      }
+      refreshAt(17, 55, 0);
+    </script>
     </body>
 </html>
