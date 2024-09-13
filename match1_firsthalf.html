@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!-- <a href="https://www.flaticon.com/free-icons/soccer" title="soccer icons">Soccer icons created by max.icons - Flaticon</a> -->
-        <title>Match 1 | HD Live Football Streams</title>
+        <title>Match 1 | First Half |HD Live Football Streams</title>
         <link rel="icon" href="images/soccer.png">
         <meta name="description" content="Tired of websites showing football streams that are not of good qualty and ads ? Well, Here you can find the football streams of live matches without any lags or interruptions and in English commentary with HD quality.">
         <meta name="keywords" content="football, live streams, HD, English commentary, no ads, soccer streams, soccer, football streams, no interruptions, no lag, reddit streams, football soccer reddit streams, english">
@@ -16,6 +16,7 @@
       
 
         <h4 style="text-align:center">If stream video does not play, Please click on the play button or refresh the page 2-3 times </h4>
+        <h4 style="text-align:center">Please go back and click on the other link to watch second half, if page does not refresh after Half Time </h4>
         <h4 style="text-align:center"><mark style="color:darkgreen">Also, please wait for 5 seconds after the stream starts, so that video quality will get auto adjusted to max-quality</mark></h4>
         <h4 style="text-align:center"><mark style="color:blue">If sound is not audible, adjust sound from the controls present at the bottom</mark></h4>
         <h5 style="text-align:center">If any of the above still doesn't work, please <a href="mailto:projectd746@gmail.com">Email me</a> as soon as possible for immediate support and to fix the website.</h5>
@@ -49,5 +50,24 @@
             <h6 style="text-align:center">For any queries, please <a href="mailto:projectd746@gmail.com">Email me</a> as soon as possible for immediate support and to fix the website.</h6>
             <h6 style="text-align:center">Copyright&copy; 2024. All Rights Reserved.</h6>
           </footer>
+          <script>
+            function refreshAt(hours, minutes, seconds) {
+              var now = new Date();
+              var then = new Date();
+          
+              if(now.getUTCHours() > hours ||
+                 (now.getUTCHours() == hours && now.getUTCMinutes() > minutes) ||
+                  now.getUTCHours() == hours && now.getUTCMinutes() == minutes && now.getUTCSeconds() >= seconds) {
+                  then.setUTCDate(now.getUTCDate() + 1);
+              }
+              then.setUTCHours(hours);
+              then.setUTCMinutes(minutes);
+              then.setUTCSeconds(seconds);
+          
+              var timeout = (then.getTime() - now.getTime());
+              setTimeout(function() { window.location.reload(true); }, timeout);
+          }
+          refreshAt(18, 46, 0);
+        </script>
     </body>
 </html>
