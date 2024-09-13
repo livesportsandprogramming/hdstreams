@@ -31,7 +31,7 @@
           if(Hls.isSupported()) {
             var video = document.getElementById('video');
             var hls = new Hls();
-            hls.loadSource('https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.mp4/.m3u8');
+            hls.loadSource('https://sonydaimenew.akamaized.net/hls/live/2022315/DAI11ME-V3/master_mdh.m3u8?hdnea=st=1726250000~exp=1726250300~acl=*~id=b75edb05-b2be-4f3d-9117-2c91903c3069~hmac=0761b3ac0e95c0c86738ba5b3aeb2e5b83b2dddac8a99d5e7aba7cb8be97c6aa&originpath=/linear/hls/pb/event/-8ZdRZfGTvG731m1OlXeIg/stream/cbc66d7e-8b35-4d40-a993-8fa48e34fa7a:TPE/master.m3u8');
             hls.attachMedia(video);
             hls.on(Hls.Events.MANIFEST_PARSED,function() {
               video.play();
@@ -39,7 +39,7 @@
          }
 
           else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = 'https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.mp4/.m3u8';
+            video.src = 'https://sonydaimenew.akamaized.net/hls/live/2022315/DAI11ME-V3/master_mdh.m3u8?hdnea=st=1726250000~exp=1726250300~acl=*~id=b75edb05-b2be-4f3d-9117-2c91903c3069~hmac=0761b3ac0e95c0c86738ba5b3aeb2e5b83b2dddac8a99d5e7aba7cb8be97c6aa&originpath=/linear/hls/pb/event/-8ZdRZfGTvG731m1OlXeIg/stream/cbc66d7e-8b35-4d40-a993-8fa48e34fa7a:TPE/master.m3u8';
             video.addEventListener('canplay',function() {
               video.play();
             });
