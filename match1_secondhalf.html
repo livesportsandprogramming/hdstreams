@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- <a href="https://www.flaticon.com/free-icons/soccer" title="soccer icons">Soccer icons created by max.icons - Flaticon</a> -->
+        <title>Match 1 | Seconf Half | HD Live Football Streams</title>
+        <link rel="icon" href="images/soccer.png">
+        <meta name="description" content="Tired of websites showing football streams that are not of good qualty and ads ? Well, Here you can find the football streams of live matches without any lags or interruptions and in English commentary with HD quality.">
+        <meta name="keywords" content="football, live streams, HD, English commentary, no ads, soccer streams, soccer, football streams, no interruptions, no lag, reddit streams, football soccer reddit streams, english">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body style="background-color:antiquewhite">
+        <br>
+      
+
+        <h4 style="text-align:center">If stream video does not play, Please click on the play button or refresh the page 2-3 times </h4>
+        <h4 style="text-align:center"><mark style="color:darkgreen">Also, please wait for 5 seconds after the stream starts, so that video quality will get auto adjusted to max-quality</mark></h4>
+        <h4 style="text-align:center"><mark style="color:blue">If sound is not audible, adjust sound from the controls present at the bottom</mark></h4>
+        <h5 style="text-align:center">If any of the above still doesn't work, please <a href="mailto:projectd746@gmail.com">Email me</a> as soon as possible for immediate support and to fix the website.</h5>
+
+        <hr>
+
+        <h6 style="text-align:center">Al-Nassr vs Al-Ahli Saudi</h6>
+
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <video id="video" width="100%" height="100%" poster="#" controls autoplay muted></video>
+        <script>
+          if(Hls.isSupported()) {
+            var video = document.getElementById('video');
+            var hls = new Hls();
+            hls.loadSource('https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.mp4/.m3u8');
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED,function() {
+              video.play();
+          });
+         }
+
+          else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = 'https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.mp4/.m3u8';
+            video.addEventListener('canplay',function() {
+              video.play();
+            });
+          }
+        </script>
+        <hr>
+        <footer>
+            <h6 style="text-align:center">For any queries, please <a href="mailto:projectd746@gmail.com">Email me</a> as soon as possible for immediate support and to fix the website.</h6>
+            <h6 style="text-align:center">Copyright&copy; 2024. All Rights Reserved.</h6>
+          </footer>
+          <script>
+            function refreshAt(hours, minutes, seconds) {
+              var now = new Date();
+              var then = new Date();
+          
+              if(now.getUTCHours() > hours ||
+                 (now.getUTCHours() == hours && now.getUTCMinutes() > minutes) ||
+                  now.getUTCHours() == hours && now.getUTCMinutes() == minutes && now.getUTCSeconds() >= seconds) {
+                  then.setUTCDate(now.getUTCDate() + 1);
+              }
+              then.setUTCHours(hours);
+              then.setUTCMinutes(minutes);
+              then.setUTCSeconds(seconds);
+          
+              var timeout = (then.getTime() - now.getTime());
+              setTimeout(function() { window.location.reload(true); }, timeout);
+          }
+          refreshAt(19, 30, 0);
+        </script>
+    </body>
+</html>
